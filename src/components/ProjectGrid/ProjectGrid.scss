@@ -1,0 +1,95 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+/*	Project grid
+/* -------------------------------------------------------------------------- */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: $space-md;
+
+    @include md { 
+        grid-auto-rows: auto; 
+        gap: $space-lg;
+    }
+}
+
+/* Project card --------------------- */
+
+/**
+ * 1. Hiding overlay on smaller devices
+ * 2. Showing card description on smaller devices
+ */
+
+.project-card {
+    position: relative;
+
+    &__thumbnail {
+        display: block;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    &__overlay {
+        position: absolute;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: $space-xl;
+        background: rgba(scale-color($primary, $lightness: 5%), 97%);
+        opacity: 0;
+        transition: all .2s ease-in-out;
+
+        @include md { display: none; } /* 1 */
+    }
+
+    &:hover &__overlay { opacity: 1; }
+
+    &__title {
+        margin-bottom: $space-sm;
+        color: $on-primary;
+        font-size: $fs-xl;
+    }
+
+    &__description {
+        color: $on-primary;
+        opacity: $emph-high;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-xs;
+    }
+
+    &__tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        min-width: 48px;
+        padding: 0 $space-sm;
+        color: rgba($on-primary, 60%);
+        font-size: $fs-sm;
+        line-height: 1;
+        background: scale-color($primary, $lightness: 20%);
+    }
+
+    /* Mobile only content -------------- */
+
+    &__mobile-content {
+        display: none;
+        flex-direction: column;
+        gap: $space-xl;
+        padding: $space-lg;
+        background: scale-color($primary, $lightness: 5%);
+
+        @include md { display: flex; } /* 2 */
+    }
+}

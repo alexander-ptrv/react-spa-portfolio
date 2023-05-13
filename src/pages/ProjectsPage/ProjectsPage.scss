@@ -1,0 +1,23 @@
+@use "../../assets/styles/variables" as *;
+
+
+/* Projects page
+/* -------------------------------------------------------------------------- */
+
+.projects-wrapper {
+    min-height: 100vh;
+    padding: $space-4-xl $space-xl; 
+}
+
+.projects {
+
+    &__headline { margin-bottom: $space-2-xl; }
+
+    &__heading { margin-bottom: $space-xl; }
+
+    &__divider {
+        height: 1px;
+        margin-top: -1px;
+        background: rgba(#FFF, 20%);
+    }
+}

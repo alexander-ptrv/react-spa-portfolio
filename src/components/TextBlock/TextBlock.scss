@@ -1,0 +1,49 @@
+@use "../../assets/styles/variables" as *;
+
+
+/*	Text block container for large chunks of text
+/* -------------------------------------------------------------------------- */
+
+.text-block {
+
+    h1 { margin-bottom: $space-lg; }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: $space-2-xl;
+        margin-bottom: $space-lg;
+    }
+
+    p {
+        margin-bottom: $space-lg;
+        opacity: $emph-high;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    a {
+        color: $accent;
+        text-decoration: underline;
+    }
+
+    ul { 
+        margin-bottom: $space-lg; 
+        list-style-type: none;
+    }
+
+    ul:last-child { margin-bottom: 0; }
+
+    li { opacity: $emph-high; }
+
+    li::before {
+        display: inline-block; 
+        content: "\2022";
+        width: 1em;
+        margin-left: -1em;
+        color: $accent;
+        font-weight: $fw-bold;
+    }
+}

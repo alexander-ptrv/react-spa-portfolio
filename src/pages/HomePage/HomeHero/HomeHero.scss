@@ -1,0 +1,109 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+
+
+/* Home page hero section
+/* -------------------------------------------------------------------------- */
+
+.home-hero-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: $space-4-xl $space-lg $space-3-xl $space-xl;
+}
+
+.home-hero {
+
+    &__columns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-2-xl;
+
+        @include md { flex-direction: column-reverse; }
+    }
+
+    /* Left column ---------------------- */
+
+    &__left { flex: 1; }
+
+    &__title { 
+        margin-bottom: $space-lg; 
+
+        @include md { text-align: center; }
+    }
+
+    &__name { opacity: $emph-low; }
+
+    &__text {
+        font-size: $fs-lg;
+        opacity: $emph-md;
+        margin-bottom: $space-2-xl;
+
+        @include md { text-align: center; }
+    }
+
+    &__btns {
+        display: flex;
+        gap: $space-xs;
+        
+        @include md { justify-content: center; }
+    }
+
+    &__work-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: $space-xs;
+        padding: 0 $space-md;
+        height: 48px;
+        min-width: 64px;
+        color: $on-primary;
+        font-family: inherit;
+        font-size: $fs-lg;
+        font-weight: $fw-base;
+        line-height: 1;
+        background: transparent;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+
+        @include md { font-size: $fs-md; }    
+    }
+
+    &__work-btn-icon {
+        width: 18px;
+        height: 18px;
+        transition: all .2s ease-in-out;
+
+        @include md { display: none; }
+    }
+
+    &__work-btn:hover { background: rgba($on-primary, 4%); }
+
+    &__work-btn:hover > &__work-btn-icon {
+        transform: rotate(90deg);
+    }
+
+    &__work-btn-icon-mobile {
+        display: none;
+
+        @include md { display: block; }
+    }
+
+
+    /* Right column --------------------- */
+
+    &__right { 
+        flex: 1; 
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__image {
+        
+        @include md {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+
+
+/* Project page footer
+/* -------------------------------------------------------------------------- */
+
+.project-footer-wrapper {
+    padding: $space-4-xl $space-lg $space-4-xl $space-xl;
+
+    @include md {
+        padding: $space-3-xl $space-lg $space-3-xl $space-lg;
+    }
+}
+
+.project-footer {
+    text-align: center;
+
+    &__heading {
+        margin-bottom: $space-lg; 
+    }
+
+    &__text {
+        margin-bottom: $space-2-xl;
+        opacity: $emph-md;
+    }
+}

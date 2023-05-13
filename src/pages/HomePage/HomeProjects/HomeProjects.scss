@@ -1,0 +1,16 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+
+
+/* Home projects section
+/* -------------------------------------------------------------------------- */
+
+.home-projects {
+    
+    &__headline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $space-2-xl;
+    }
+}

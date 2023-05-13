@@ -1,0 +1,31 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+/* Helper classes
+/* -------------------------------------------------------------------------- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &--2-xl { max-width: 1920px; }
+
+    &--xl { max-width: 1400px; }
+
+    &--md { max-width: 992px; }
+
+    &--sm { max-width: 768px; }
+
+    &--xs { max-width: 576px; }
+}
+
+.section-padding {
+    padding: $space-4-xl $space-xl;
+
+    @include md {
+        padding: $space-3-xl $space-xl;
+    }
+}
+
+.no-scroll { overflow: hidden; }

@@ -1,0 +1,23 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+
+
+/* Home page footer
+/* -------------------------------------------------------------------------- */
+
+.home-footer-wrapper {
+    padding: $space-4-xl $space-lg $space-5-xl $space-xl;
+
+    @include md { padding: $space-3-xl $space-lg $space-4-xl $space-lg; }
+}
+
+.home-footer {
+    text-align: center;
+
+    &__heading { margin-bottom: $space-lg; }
+
+    &__text {
+        margin-bottom: $space-2-xl;
+        opacity: $emph-md;
+    }
+}

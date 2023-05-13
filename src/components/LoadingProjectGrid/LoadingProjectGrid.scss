@@ -1,0 +1,33 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+/*	Grid with rectangles to replace post grid while it's loading
+/* -------------------------------------------------------------------------- */
+
+.loading-project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: $space-md;
+
+    @include md { 
+        grid-auto-rows: auto; 
+        gap: $space-lg;
+    }
+
+    /* Loading card --------------------- */
+
+    &__card {
+        aspect-ratio: 4 / 3;
+        background: scale-color($primary, $lightness: 5%);
+        animation: pulse 2s infinite ease-in-out;
+    }
+}
+
+/* Loading animation ---------------- */
+
+@keyframes pulse {
+    0%, 100% { background: scale-color($primary, $lightness: 5%); }
+    50% { background: transparent; }
+}

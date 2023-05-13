@@ -1,0 +1,76 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+/* Main header
+/* -------------------------------------------------------------------------- */ 
+
+/**
+ * 1. Immproves header visibility on devices smaller than 1920px
+ * 2. Adding background to header when curtain is active
+ * 3. Filling header with solid color on mobile when curtain is active
+ */
+
+.header-wrapper {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    padding: 0 $space-lg 0 $space-xl;
+    background: rgba($primary, 0%);
+    transition: all .2s ease-in-out;
+
+    @include xxl { background: rgba($primary, 87%); } /* 1 */
+
+    &--is-filled { 
+        background: rgba($primary, 99%); /* 2 */
+        
+        @include sm { background: scale-color($primary, $lightness: 3%); } /* 3 */
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-xl;
+    height: 64px;
+
+    /* Left side ------------------------ */
+
+    &__logo { @include sm { height: 18px; } }
+
+    /* Right side ----------------------- */
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__email-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $space-xs;
+        min-width: 48px;
+        height: 48px;
+        padding: 0 $space-md;
+        color: $on-primary;
+        font-size: $fs-lg;
+        line-height: 1;
+
+        @include sm { display: none; }
+    }
+
+    &__email-icon {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        color: $on-primary;
+        font-size: $fs-xl;
+
+        @include sm { display: flex; }
+    }
+}

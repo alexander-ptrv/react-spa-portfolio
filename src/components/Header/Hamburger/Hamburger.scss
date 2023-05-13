@@ -1,0 +1,49 @@
+@use "../../../assets/styles/variables" as *;
+
+
+/* Hamburger button
+/* -------------------------------------------------------------------------- */ 
+
+.hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    cursor: pointer;
+
+    /* Top line ------------------------- */
+
+    &__top-line {
+        position: absolute;
+        top: 23px; 
+        width: 24px;
+        height: 2px;
+        background: $accent;
+        transform: translateY(-6px);
+        transition: all .2s ease-in-out;
+    }
+
+    &__top--rotated { 
+        transform: translateY(0px) rotate(45deg); 
+    }
+
+    /* Bottom line ---------------------- */
+
+    &__bottom-line {
+        position: absolute;
+        top: 23px; 
+        width: 24px;
+        height: 2px;
+        background: $accent;
+        transform: translateY(6px);
+        transition: all .2s ease-in-out;
+    }
+
+    &__bottom--rotated { 
+        transform: translateY(0px) rotate(-45deg); 
+    }
+}

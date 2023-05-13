@@ -1,0 +1,61 @@
+/*	Variables
+/* -------------------------------------------------------------------------- */
+
+/* Color palette -------------------- */
+
+$accent: #FFD369;
+$primary: #181C22;
+// $primary: #232831;
+$error: #FC4831;
+
+/* Font color ----------------------- */
+
+$on-accent: #181C22;
+$on-primary: #FFF;
+
+/* Font size ------------------------ */
+
+$fs-5-xl: 5.6rem;
+$fs-4-xl: 4.8rem;
+$fs-3-xl: 4rem;
+$fs-2-xl: 3.2rem;
+$fs-xl: 2.4rem;
+$fs-lg: 1.8rem;
+$fs-md: 1.6rem;
+$fs-sm: 1.4rem;
+$fs-xs: 1.2rem;
+
+/* Line height ---------------------- */
+
+$lh-body: 1.6;
+$lh-heading: 1.25;
+
+/* Font weight ---------------------- */
+
+$fw-black: 900;
+$fw-extra-bold: 800;
+$fw-bold: 700;
+$fw-semi-bold: 600;
+$fw-medium: 500;
+$fw-base: 300;
+
+/* Emphasis (opacity) ------------------------- */
+
+$emph-base: 1;
+$emph-high: .87;
+$emph-md: .6;
+$emph-low: .38;
+
+/* Spacing -------------------------- */
+
+$space-5-xl: 256px;
+$space-4-xl: 128px;
+$space-3-xl: 64px;
+$space-2-xl: 48px;
+$space-xl: 32px;
+$space-lg: 24px;
+$space-md: 16px;
+$space-sm: 12px;
+$space-xs: 8px;
+$space-2-xs: 4px;
+$space-3-xs: 2px;

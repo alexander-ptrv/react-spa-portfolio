@@ -1,0 +1,29 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+
+
+/* Project description section
+/* -------------------------------------------------------------------------- */
+
+.project-description {
+
+    &__columns {
+        display: flex;
+        justify-content: space-between;
+        gap: $space-2-xl;
+
+        @include xs { flex-direction: column-reverse; }
+    }
+
+    /* Left column ---------------------- */
+
+    &__left { flex: 2; }
+
+    &__title { margin-bottom: $space-lg; }
+
+    &__text { max-width: 600px; }
+
+    /* Right column --------------------- */
+
+    &__right { flex: 1; }
+}

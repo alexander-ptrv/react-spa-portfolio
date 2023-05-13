@@ -1,0 +1,17 @@
+@use "../../assets/styles/variables" as *;
+
+
+/* Loading error badge
+/* -------------------------------------------------------------------------- */ 
+
+.error-badge {
+    padding: $space-xl;
+    background: scale-color($primary, $lightness: 10%);
+
+    &__title {
+        margin-bottom: $space-xs;
+        font-size: $fs-lg;
+    }
+
+    &__text { opacity: $emph-md; }
+}

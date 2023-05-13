@@ -1,0 +1,66 @@
+@use "../../../../assets/styles/variables" as *;
+
+
+/* Project page sidebar
+/* -------------------------------------------------------------------------- */
+
+.project-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+    max-width: 300px;
+
+    /* Widget --------------------------- */
+
+    &__widget { cursor: default; }
+
+    &__widget:hover &__widget-title::before {
+        background: $accent;
+    }
+
+    &__widget-title {
+        position: relative;
+        font-size: $fs-md;
+    }
+
+    &__widget-title::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -18px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $accent;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: all .15s ease-in-out;
+    }
+
+    &__widget-text {
+        margin-top: $space-xs;
+        font-size: $fs-sm;
+        opacity: $emph-md;
+    }
+
+    /* Widget tags ---------------------- */
+
+    &__widget-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-xs;
+        margin-top: $space-md;
+    }
+
+    &__widget-tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        min-width: 48px;
+        padding: 0 $space-sm;
+        color: rgba($on-primary, 60%);
+        font-size: $fs-sm;
+        line-height: 1;
+        background: scale-color($primary, $lightness: 10%);
+    }
+}

@@ -1,0 +1,63 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+/* Overlay containing a contact form
+/* -------------------------------------------------------------------------- */ 
+
+.form-overlay-wrapper {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 25px;
+    background: rgba($primary, 99%);
+
+    &--is-active { display: flex; }
+
+    &__close-btn {
+        position: absolute;
+        top: 8px;
+        right: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        opacity: $emph-md;
+        background: transparent;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+
+    &__close-btn:hover { opacity: 1; }
+}
+
+.form-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+
+    @include md { width: 100%; }
+
+    /* Form wrapper --------------------- */
+
+    &__form-wrapper {
+        padding: $space-xl;
+        background: scale-color($primary, $lightness: 3%);
+    }
+
+    &__heading { margin-bottom: $space-sm; }
+
+    &__text {
+        margin-bottom: $space-lg;
+        opacity: $emph-md;
+    }
+}

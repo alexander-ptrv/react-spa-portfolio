@@ -1,0 +1,113 @@
+@use "../../assets/styles/variables" as *;
+
+
+/* Contact form
+/* -------------------------------------------------------------------------- */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    width: 100%;
+
+    &--is-hidden { display: none; }
+
+    /* Inputs ---------------------- */
+
+    /* Shared class used for input[type="text"],
+     * input[type="email"] and textarea.
+     */
+
+    &__text-field {
+        display: flex;
+        align-items: center;
+        padding: 0 $space-sm;
+        height: 48px;
+        border: 1px solid rgba($on-primary, 20%);
+        color: $on-primary;
+        font-family: inherit;
+        font-size: $fs-md;
+        font-weight: inherit;
+        background: transparent;
+    }
+
+    &__text-field::placeholder {
+        color: $on-primary;
+        opacity: $emph-low;
+    }
+
+    &__text-field:focus {
+        border-color: rgba($on-primary, 60%);
+        background: scale-color($primary, $lightness: 5%);
+    }
+
+    &__text-field--is-faulty { border: 1px solid $error; }
+
+    &__text-field--is-faulty:focus { border: 1px solid $error; }
+
+    /* Textarea specific styling -------- */
+
+    &__text-field--textarea {
+        min-height: 96px;
+        padding: $space-md;
+        resize: none;
+    }
+
+    /* Submit button -------------------- */
+
+    &__send-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 48px;
+        height: 48px;
+        padding: 0 $space-md;
+        border: 1px solid $accent;
+        color: $accent;
+        font-family: inherit;
+        font-size: $fs-lg;
+        font-weight: $fw-base;
+        background: transparent;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+
+    &__send-btn:hover { background: rgba($accent, 6%); }
+
+    /* Error messages ------------------- */
+
+    &__error {
+        color: $error;
+        font-size: $fs-sm;
+    }
+
+    &__error--empty-name,
+    &__error--empty-email,
+    &__error--empty-message {
+        display: none;
+    }
+    
+    &__error--empty-name-active,
+    &__error--empty-email-active,
+    &__error--empty-message-active {
+        display: block;
+    }
+}
+
+/* Success message badge ------------ */
+
+.form-success-message {
+    display: none;
+    margin-top: $space-lg;
+    padding: $space-lg;
+    background: #2B323C;
+
+    &__heading {
+        margin-bottom: $space-xs;
+        font-size: $fs-lg;
+    }
+
+    &__text { opacity: $emph-md; }
+
+    &--is-active { display: block; }
+}

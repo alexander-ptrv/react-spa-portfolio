@@ -1,0 +1,55 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+/*	Tabbed navigation
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Horizontal scrolling menu
+ *
+ * 1. Only showing scrollbar when it's needed
+ * 2. All items a forced onto a single line 
+ * 3. Smooth scrolling on iOS
+ * 4. Hiding scrollbar from MS Edge
+ * 5. Hiding scrollbar from webkit browsers
+ */
+
+.tabbed-nav {
+    height: 48px;
+    overflow: auto; /* 1 */
+    white-space: nowrap; /* 2 */
+    -webkit-overflow-scrolling: touch; /* 3 */
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* 4 */
+    
+    @include sm { text-align: center; }
+
+    &::-webkit-scrollbar { display: none; } /* 5 */
+
+    /* Menu item --------------------- */
+
+    &__menu-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        min-width: 48px;
+        padding: 0 $space-md;
+        border-bottom: 1px solid transparent;
+        color: $on-primary;
+        font-size: $fs-md;
+        line-height: 1;
+        opacity: $emph-md;
+        transition: all .2s ease-in-out;
+    
+        @include sm { flex: 1; }
+    }
+    
+    &__menu-item:hover { opacity: $emph-base; }
+    
+    &__menu-item.active {
+        border-bottom-color: $accent;
+        opacity: $emph-base;
+    }
+}
+

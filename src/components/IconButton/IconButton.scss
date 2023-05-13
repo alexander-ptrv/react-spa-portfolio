@@ -1,0 +1,27 @@
+@use "../../assets/styles/variables" as *;
+
+
+/*	Icons button with external/internal link
+/* -------------------------------------------------------------------------- */
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    font-size: $fs-xl;
+    line-height: 1;
+    transition: all .2s ease-in-out;
+
+    /* Icon without background ---------- */
+
+    &--icon-only {
+        color: $on-primary;
+    }
+
+    &--icon-only:hover {
+        color: $accent;
+        transform: translateY(-3px);
+    }
+}

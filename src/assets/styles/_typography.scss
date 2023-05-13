@@ -1,0 +1,49 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* Typography styling
+/* -------------------------------------------------------------------------- */
+
+h1 {
+    font-size: $fs-4-xl;
+    font-weight: $fw-medium;
+    line-height: $lh-heading;
+
+    @include md { font-size: $fs-2-xl; }
+}
+
+h2 {
+    font-size: $fs-3-xl;
+    font-weight: $fw-medium;
+    line-height: $lh-heading;
+
+    @include md { 
+        font-size: $fs-xl; 
+        line-height: $lh-body; 
+    }
+}
+
+h3 {
+    font-size: $fs-2-xl;
+    font-weight: $fw-medium;
+    line-height: $lh-heading;
+
+    @include md { 
+        font-size: $fs-xl; 
+        line-height: $lh-body; 
+    }    
+}
+
+h4 {
+    font-size: $fs-xl;
+    font-weight: $fw-medium;
+    line-height: $lh-heading;   
+}
+
+p {
+    font-size: $fs-md;
+    line-height: $lh-body;
+}

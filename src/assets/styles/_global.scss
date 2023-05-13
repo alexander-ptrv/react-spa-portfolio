@@ -1,0 +1,53 @@
+@use "./variables" as *;
+
+
+/* Base styling and resets
+/* -------------------------------------------------------------------------- */
+
+*, 
+*:before, 
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+html {
+  color: $on-primary;
+  font-family: 'Inter', sans-serif;
+  font-size: 62.5%; /* 1 */
+  font-weight: $fw-base;
+  scroll-behavior: smooth;
+}
+
+body { 
+  overflow-y: scroll; /* 2 */
+  background: $primary; 
+}
+
+::selection {
+  color: $on-accent;
+  background: $accent;
+}
+
+ul, ol {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  list-style-position: outside;
+}
+
+li {
+  font-size: $fs-md;
+  line-height: $lh-body;
+}
+
+strong { font-weight: $fw-medium; }
+
+img { 
+  display: block;
+  max-width: 100%; 
+}

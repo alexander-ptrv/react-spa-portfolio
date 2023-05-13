@@ -1,0 +1,186 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+/* Sliding curtain menu
+/* -------------------------------------------------------------------------- */ 
+
+/**
+ * 1. Subtracting height of the header 
+ * 2. Moving curtain outside of the view
+ * 3. Moving curtain back into view
+ */
+
+.curtain-wrapper {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    height: calc(100vh - 64px); /* 1 */
+    overflow: auto;
+    padding: $space-3-xl $space-xl $space-4-xl $space-xl;
+    background: rgba($primary, 99%);
+    transform: translateX(100%); /* 2 */
+    transition: all .2s ease-in-out;
+
+    @include sm { 
+        top: 64px;
+        bottom: auto;
+        padding: 0;
+        background: $primary;
+    }
+
+    &--is-visible { transform: translateX(0); } /* 3 */
+}
+
+.curtain {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+
+    @include sm { align-items: flex-start; }
+
+    &__columns {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: $space-2-xl;
+
+        @include sm {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    /* Left column ------------------------------------------ */
+
+    /* Menu --------------------- */
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xl;
+
+        @include sm { 
+            gap: 0; 
+            padding: $space-lg $space-xl;
+            border-bottom: 1px solid rgba(#FFF, 20%);
+            background: $primary;
+        }
+    }
+
+    /* Menu item ------------------------ */
+    
+    &__menu-item {
+        color: $on-primary;
+        font-size: $fs-5-xl;
+        font-weight: $fw-medium;
+        line-height: $lh-heading;
+        transition: all .2s ease-in-out;
+
+        @include sm {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            min-width: 48px;
+            font-size: $fs-lg;
+            font-weight: $fw-base;
+            line-height: 1;
+        }
+    }
+
+    &__menu-item:hover { transform: translateX(3px); }
+
+    &__menu-item.active {
+        color: $accent;
+        opacity: 1;
+    }
+
+    /* Right column ----------------------------------------- */
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__widgets {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: $space-2-xl;
+
+        @include sm {
+            gap: $space-xl;
+            padding: $space-xl;
+        }
+    }
+
+    &__overline {
+        margin-bottom: $space-sm;
+        font-size: $fs-sm;
+        opacity: $emph-md;
+    }
+
+    /* Email widget --------------------- */
+
+    &__email {
+        color: $on-primary;
+        font-size: $fs-2-xl;
+        font-weight: $fw-medium;
+        line-height: $lh-heading;
+        transition: all .2s ease-in-out;
+
+        @include sm { 
+            font-size: $fs-md; 
+            font-weight: $fw-base;
+            opacity: $emph-high;
+        }
+    }
+
+    &__email:hover { color: $accent; }
+
+    /* Messengers widget ---------------- */
+
+    &__messengers {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xs;
+    }
+
+    &__messenger-btn {
+        display: flex;
+        align-items: center;
+        min-width: 48px;
+        height: 32px;
+        gap: $space-xs;
+        color: $on-primary;
+        font-size: $fs-lg;
+        transition: all .2s ease-in-out;
+
+        @include sm { 
+            font-size: $fs-md; 
+            opacity: $emph-high;
+        }
+    }
+
+    &__messenger-btn:hover { transform: translateX(3px); }
+
+    &__messenger-btn--telegram svg { color: #30A8DE; }
+
+    &__messenger-btn--whatsapp svg { color: #25D366; }
+
+    /* Social medias widget ------------- */
+
+    &__socials {
+        display: flex;
+        justify-content: flex-end;
+        gap: $space-xs;
+        margin-left: -12px;
+        opacity: $emph-high;
+        transition: all .2s ease-in-out;
+    }
+
+    &__socials:hover { opacity: 1; }
+}

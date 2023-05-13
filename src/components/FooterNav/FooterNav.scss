@@ -1,0 +1,38 @@
+@use "../../assets/styles/variables" as *;
+
+
+/* Footer menu
+/* -------------------------------------------------------------------------- */ 
+
+.footer-nav-wrapper {
+    background: scale-color($primary, $lightness: -20%);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    /* Menu item ------------------------ */
+
+    &__menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 48px;
+        height: 48px;
+        padding: 0 $space-md;
+        color: rgba($on-primary, 60%);
+        font-size: $fs-md;
+        transition: all .2s ease-in-out;
+    }
+
+    &__menu-item.active {
+        color: $accent;
+    }
+
+    &__menu-item:hover {
+        color: rgba($on-primary, 87%);
+    }
+}

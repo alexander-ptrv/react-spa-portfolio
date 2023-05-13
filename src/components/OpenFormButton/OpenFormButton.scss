@@ -1,0 +1,33 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+/*	Button that triggers contact form popup
+/* -------------------------------------------------------------------------- */
+
+/**
+ * 1. Preventing stretch
+ */
+
+.open-form-btn {
+    display: inline-flex; /* 1 */
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    min-width: 64px;
+    gap: $space-xs;
+    padding: 0 $space-md;
+    border: 1px solid $accent;
+    color: $accent;
+    font-family: inherit;
+    font-size: $fs-lg;
+    font-weight: $fw-base;
+    line-height: 1;
+    background: transparent;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    @include md { font-size: $fs-md; }
+
+    &:hover { background: rgba($accent, 6%); }
+}
