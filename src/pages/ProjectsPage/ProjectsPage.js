@@ -1,23 +1,18 @@
-import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import ColoredDot from "../../components/ColoredDot/ColoredDot";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import "./ProjectsPage.scss";
-import TabbedNav from "../../components/TabbedNav/TabbedNav";
 import FooterNav from "../../components/FooterNav/FooterNav";
+import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
+import LoadingProjectGrid from "../../components/LoadingProjectGrid/LoadingProjectGrid";
+import useFetch from "../../hooks/useFetch";
+import ErrorBadge from "../../components/ErrorBadge/ErrorBadge";
 
-
-// Tabbed nav items
-const data = [
-    {name: "All", link: "/projects", key: 0},
-    {name: "HTML5/CSS3", link: "/projects/technology/html5-css3", key: 1},
-    {name: "PHP", link: "/projects/technology/php", key: 2},
-    {name: "WordPress", link: "/projects/technology/wordpress", key: 3},
-    {name: "React", link: "/projects/technology/react", key: 4}
-]
 
 const ProjectsPage = () => {
+
+    const {data, loading, error} = useFetch("https://wordpress.ptrv.dev/wp-json/wp/v2/project?acf_format=standard&_embed&per_page=50");
 
     useScrollToTop();
 
@@ -34,11 +29,10 @@ const ProjectsPage = () => {
                 <div className="projects container">
                     <div className="projects__headline">
                         <h1 className="projects__heading">Projects<ColoredDot /></h1>
-                        <TabbedNav data={data} />
-                        <div className="projects__divider"></div>
                     </div>
-                    {/* Content of the outlet is in the "tabs" folder */}
-                    <Outlet />
+                    {loading && <LoadingProjectGrid />}
+                    {error && <ErrorBadge />}
+                    <ProjectGrid data={data} />
                 </div>
             </section>
             <FooterNav />
