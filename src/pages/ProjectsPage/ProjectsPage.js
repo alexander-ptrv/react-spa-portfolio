@@ -8,6 +8,7 @@ import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
 import LoadingProjectGrid from "../../components/LoadingProjectGrid/LoadingProjectGrid";
 import useFetch from "../../hooks/useFetch";
 import ErrorBadge from "../../components/ErrorBadge/ErrorBadge";
+import FixedSocials from "../../components/FixedSocials/FixedSocials";
 
 
 const ProjectsPage = () => {
@@ -35,6 +36,7 @@ const ProjectsPage = () => {
                     <ProjectGrid data={data} />
                 </div>
             </section>
+            <FixedSocials />
             <FooterNav />
         </>
     );
