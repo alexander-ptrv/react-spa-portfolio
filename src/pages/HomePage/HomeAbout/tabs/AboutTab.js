@@ -27,15 +27,15 @@ const AboutTab = () => {
         <>  
             <div className="home-about__tab-text">
                 <p>
-                    Hello! My name is Alexander, I enjoy coding and designing web interfaces. 
-                    My interest in web development started back in 2004 when I read “HTML4 
-                    For Dummies” book and created my first web page in notepad, listing my favorite 
-                    video games.
+                    Hello! My name is Alexander, I'm a frontend developer and UI/UX designer, currently located
+                    in Moscow, Russia. 
                 </p>
                 <p>
-                    I took web development and design seriously much later, in 2016, on 4th year of financial 
-                    university. Even though finance and economics is not what I want to do for
-                    living, university made me fall in love with analysing and putting to use various
+                    My interest in web development started back in 2004, when I read “HTML4 
+                    For Dummies” book and created my first web page in notepad, listing my favorite 
+                    video games. I took web development and design seriously much later, in 2016, on 4th 
+                    year of financial university. Even though finance and economics is not what I want to 
+                    do for living, university made me fall in love with analysing and putting to use various
                     data, which helps me a lot in design work.
                 </p>
                 <p>
