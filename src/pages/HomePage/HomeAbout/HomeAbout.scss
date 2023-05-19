@@ -21,11 +21,7 @@
 
     /* Tab content ---------------------- */
 
-    &__headline { 
-        margin-bottom: $space-xl; 
-
-        @include sm { text-align: center; }
-    }
+    &__headline { margin-bottom: $space-xl; }
 
     &__divider {
         height: 1px;

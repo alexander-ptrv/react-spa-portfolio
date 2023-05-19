@@ -9,6 +9,7 @@ import SingleProject from "./pages/SingleProject/SingleProject";
 import Curtain from "./components/Curtain/Curtain";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import FormOverlay from "./components/FormOverlay/FormOverlay";
+import NotFound from "./pages/NotFound/NotFound";
 
 const App = () => {
     return (  
@@ -24,7 +25,8 @@ const App = () => {
                 </Route>
                 <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/projects/:slug" element={<SingleProject />} />
-                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="*" element={<NotFound />} />
+                {/* <Route path="*" element={<Navigate to="/" />} /> */}
             </Routes>
         </BrowserRouter>
     );

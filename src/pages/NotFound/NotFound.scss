@@ -1,0 +1,30 @@
+@use "../../assets/styles/variables" as *;
+
+
+.not-found-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: $space-4-xl $space-lg $space-3-xl $space-xl;
+}
+
+.not-found {
+
+    &__error-code {
+        margin-bottom: $space-md;
+        font-size: 8rem;
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: $space-2-xl;
+        font-size: $fs-lg;
+        text-align: center;
+        opacity: $emph-md;
+    }
+
+    &__btn-wrapper {
+        text-align: center;
+    }
+}
