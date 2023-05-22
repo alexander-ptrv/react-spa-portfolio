@@ -15,15 +15,17 @@ const SingleProject = () => {
 
     const {data, loading, error} = useFetch(`https://wordpress.ptrv.dev/wp-json/wp/v2/project?slug=${slug}&_embed&acf_format=standard`);
     
-    const seoTitle = data.title?.rendered;
-    const seoDescription = data.content?.rendered;
+    const seoTitle = data["0"]?.title.rendered;
+    const seoDescription = data["0"]?.content.rendered;
+
+    console.log(seoTitle);
 
     useScrollToTop();
 
     return (  
         <>  
             <Helmet>
-                <title>Alexander Petrov | {`${seoTitle}`}</title>
+                <title>Alexander Petrov | Projects | {`${seoTitle}`}</title>
                 <meta 
                     name="description" 
                     content={`${seoDescription}`}
