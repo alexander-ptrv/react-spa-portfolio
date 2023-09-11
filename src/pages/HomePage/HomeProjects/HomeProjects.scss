@@ -6,11 +6,20 @@
 /* -------------------------------------------------------------------------- */
 
 .home-projects {
-    
     &__headline {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: $space-md;
         margin-bottom: $space-2-xl;
+    }
+
+    &__heading-holder { flex: 2; }
+
+    &__btn-holder {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 }

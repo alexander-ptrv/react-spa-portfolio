@@ -27,7 +27,10 @@ const ProjectGrid = ({data}) => {
                     <div className="project-card__mobile-content">
                         <div className="project-card__info">
                             <h3 className="project-card__title">{project.title.rendered}</h3>
-                            <p className="project-card__description">{project.excerpt.rendered}</p>
+                            <div 
+                                className="project-card__description" 
+                                dangerouslySetInnerHTML={{__html: project.excerpt.rendered}}
+                            />
                         </div>
                         <div className="project-card__tags">
                             {project._embedded["wp:term"]["1"].map((tech) => (

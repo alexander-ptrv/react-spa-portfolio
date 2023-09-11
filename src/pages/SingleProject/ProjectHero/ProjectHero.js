@@ -17,28 +17,30 @@ const ProjectHero = ({data}) => {
                         {data["0"].title.rendered}<ColoredDot />
                     </h1>
                     {/* Project links */}
-                    <div className="project-hero__actions">
-                        {data["0"].acf.github_link && (
-                            <Button 
-                                variant="outlined" 
-                                to={data["0"].acf.github_link} 
-                                rightIcon={<FiGithub />} 
-                                isExternal
-                            >
-                                GitHub
-                            </Button>
-                        )}
-                        {data["0"].acf.website_link && (
-                            <Button 
-                                variant="cta" 
-                                to={data["0"].acf.website_link} 
-                                rightIcon={<FiExternalLink />} 
-                                isExternal
-                            >
-                                Website
-                            </Button>
-                        )}
-                    </div>
+                    {(data["0"].acf.github_link || data["0"].acf.website_link) &&
+                        <div className="project-hero__actions">
+                            {data["0"].acf.github_link && (
+                                <Button 
+                                    variant="outlined" 
+                                    to={data["0"].acf.github_link} 
+                                    rightIcon={<FiGithub />} 
+                                    isExternal
+                                >
+                                    GitHub
+                                </Button>
+                            )}
+                            {data["0"].acf.website_link && (
+                                <Button 
+                                    variant="cta" 
+                                    to={data["0"].acf.website_link} 
+                                    rightIcon={<FiExternalLink />} 
+                                    isExternal
+                                >
+                                    Website
+                                </Button>
+                            )}
+                        </div>
+                    }
                 </div>
                 {/* Project scrollable screen */}
                 <div className="project-hero__screen-holder">

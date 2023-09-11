@@ -39,7 +39,7 @@ const AboutTab = () => {
                     data, which helps me a lot in design work.
                 </p>
                 <p>
-                    At the time of writing this I helped more than 150 businesses to design, develop, 
+                    At the time of writing this I helped more than 200 businesses to design, develop, 
                     maintain and promote their presence in the web, working both in small teams and as a 
                     freelancer. 
                 </p>

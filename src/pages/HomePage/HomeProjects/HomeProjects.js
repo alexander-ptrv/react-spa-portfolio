@@ -14,8 +14,12 @@ const HomeProjects = ({sectionRef}) => {
         <div className="home-projects-wrapper section-padding" ref={sectionRef}>
             <div className="home-projects container">
                 <div className="home-projects__headline">
-                    <h2>Featured projects<ColoredDot /></h2> 
-                    <Button variant="cta" to="/projects">View All</Button>
+                    <div className="home-projects__heading-holder">
+                        <h2>Featured projects<ColoredDot /></h2>
+                    </div>
+                     <div className="home-projects__btn-holder">
+                        <Button variant="cta" to="/projects">View All</Button>
+                    </div>
                 </div>
                 {loading && <LoadingProjectGrid />}
                 {error && <ErrorBadge />}

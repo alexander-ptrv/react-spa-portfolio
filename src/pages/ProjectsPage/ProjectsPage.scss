@@ -9,13 +9,5 @@
 }
 
 .projects {
-    &__headline { margin-bottom: $space-2-xl; }
-
-    &__heading { margin-bottom: $space-xl; }
-
-    &__divider {
-        height: 1px;
-        margin-top: -1px;
-        background: rgba(#FFF, 20%);
-    }
+    &__heading { margin-bottom: $space-2-xl; }
 }

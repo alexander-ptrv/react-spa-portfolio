@@ -2,8 +2,8 @@
 const data = [
     {
         title: "GY Web", 
-        subtitle: "WordPress developer, UI/UX designer. June 2018 – May 2023",
-        description: "Designed, developed and maintained more than 100 websites for UK-based businesses in a small team.",
+        subtitle: "WordPress developer, UI/UX designer. June 2018 – July 2023",
+        description: "Designed, developed and maintained more than 150 websites for UK-based businesses in a small team.",
         key: 0
     },
     {
