@@ -1,7 +1,6 @@
 @use "../../../assets/styles/variables" as *;
 @use "../../../assets/styles/mixins" as *;
 
-
 /* Project page hero section
 /* -------------------------------------------------------------------------- */
 
@@ -10,9 +9,7 @@
 }
 
 .project-hero {
-
-    /* Back to all projects button ------ */
-
+    /* Back button ------ */
     &__back-btn {
         display: inline-flex;
         align-items: center;
@@ -25,11 +22,9 @@
         opacity: $emph-md;
         transition: all .2s ease-in-out;
 
-        @include md { font-size: $fs-md; }
-    }
+        &:hover { opacity: 1; }
 
-    &__back-btn:hover {
-        opacity: 1;
+        @include md { font-size: $fs-md; }
     }
 
     /* Header --------------------------- */

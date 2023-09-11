@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
 import useFetch from "../../hooks/useFetch";
 import ProjectDescription from "./ProjectDescription/ProjectDescription";
 import ProjectGallery from "./ProjectGallery/ProjectGallery";

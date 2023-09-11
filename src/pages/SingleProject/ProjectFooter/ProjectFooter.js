@@ -3,11 +3,10 @@ import ColoredDot from "../../../components/ColoredDot/ColoredDot";
 import FooterNav from "../../../components/FooterNav/FooterNav";
 import OpenFormButton from "../../../components/OpenFormButton/OpenFormButton";
 
-
 const ProjectFooter = () => {
     return (  
         <>
-            <footer className="project-footer-wrapper">
+            <section className="project-footer-wrapper">
                 <div className="project-footer container container--xs">
                     <h2 className="project-footer__heading">Get in touch<ColoredDot /></h2>
                     <p className="project-footer__text">
@@ -16,7 +15,7 @@ const ProjectFooter = () => {
                     </p>
                     <OpenFormButton>Get in Touch</OpenFormButton>
                 </div>
-            </footer>
+            </section>
             <FooterNav />
         </>
     );

@@ -1,7 +1,6 @@
 import "./Hamburger.scss";
 import { toggleCurtain } from "../../../utils/utils";
 
-
 const Hamburger = () => {
     return (  
         <button className="hamburger" onClick={toggleCurtain}>

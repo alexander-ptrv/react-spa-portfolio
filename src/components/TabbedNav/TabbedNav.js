@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom";
-
 import "./TabbedNav.scss";
-
 
 // Menu items are storred in parent component and passed through props
 
@@ -15,7 +13,6 @@ const TabbedNav = ({data}) => {
                     key={item.key}
                     end={true}
                 >
-                    
                     {item.name}
                 </NavLink>
             ))}

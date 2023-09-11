@@ -1,7 +1,6 @@
 @use "../../../assets/styles/variables" as *;
 @use "../../../assets/styles/mixins" as *;
 
-
 /* Home page hero section
 /* -------------------------------------------------------------------------- */
 
@@ -13,7 +12,6 @@
 }
 
 .home-hero {
-
     &__columns {
         display: flex;
         align-items: center;
@@ -100,7 +98,6 @@
     }
 
     &__image {
-        
         @include md {
             max-width: 70%;
             margin: 0 auto;

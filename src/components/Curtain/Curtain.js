@@ -1,12 +1,10 @@
 import { FiGithub, FiLinkedin, FiDribbble } from "react-icons/fi";
 import { RiTelegramLine, RiBehanceLine } from "react-icons/ri";
-
 import { toggleCurtain } from "../../utils/utils";
 import { NavLink } from "react-router-dom";
 import IconButton from "../IconButton/IconButton";
 import "./Curtain.scss";
 import OpenFormButton from "../OpenFormButton/OpenFormButton";
-
 
 // Curtain menu items
 const data = [
@@ -29,7 +27,6 @@ const Curtain = () => {
                                 onClick={toggleCurtain}
                                 end={true}
                             >
-
                                 {item.name}
                             </NavLink>
                         ))}
@@ -44,7 +41,6 @@ const Curtain = () => {
                                     className="curtain__email" 
                                     href="mailto:ptrv.dev@gmail.com"
                                 >
-
                                     ptrv.dev@gmail.com
                                 </a>
                             </div>
@@ -58,18 +54,8 @@ const Curtain = () => {
                                         rel="nofollow"
                                         target="_blank"
                                     >
-
                                         <RiTelegramLine />Telegram
                                     </a>
-                                    {/* <a 
-                                        className="curtain__messenger-btn curtain__messenger-btn--whatsapp" 
-                                        href="https://wa.me/89680272018"
-                                        rel="nofollow"
-                                        target="_blank"
-                                    >
-
-                                        <RiWhatsappLine />WhatsApp
-                                    </a> */}
                                 </div>
                             </div>
                             {/* Social media widget */}
@@ -80,29 +66,19 @@ const Curtain = () => {
                                         to="https://dribbble.com/alexander-ptrv" 
                                         isExternal
                                     >
-
                                         <FiDribbble />
                                     </IconButton>
                                     <IconButton 
                                         to="https://www.behance.net/alexander-ptrv" 
                                         isExternal
                                     >
-
                                         <RiBehanceLine />
                                     </IconButton>
                                     <IconButton 
                                         to="https://github.com/alexander-ptrv" 
                                         isExternal
                                     >
-
                                         <FiGithub />
-                                    </IconButton>
-                                    <IconButton 
-                                        to="https://www.linkedin.com/in/alexander-petrov-1aa286218/" 
-                                        isExternal
-                                    >
-
-                                        <FiLinkedin />
                                     </IconButton>
                                 </div>
                             </div>

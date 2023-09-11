@@ -1,20 +1,19 @@
 import "./ProjectSidebar.scss";
 
-
 const ProjectSidebar = ({data}) => {
     return (  
         <aside className="project-sidebar">
             {/* Role widget */}
-            <div className="project-sidebar__widget">
+            <section className="project-sidebar__widget">
                 <h4 className="project-sidebar__widget-title">
                     My role
                 </h4>
                 <p className="project-sidebar__widget-text">
                     {data["0"].acf.role}
                 </p>
-            </div>
+            </section>
             {/* Project technologies widget */}
-            <div className="project-sidebar__widget">
+            <section className="project-sidebar__widget">
                 <h4 className="project-sidebar__widget-title">
                     Technologies
                 </h4>
@@ -25,9 +24,9 @@ const ProjectSidebar = ({data}) => {
                         </p>
                     ))}
                 </div>
-            </div>
+            </section>
             {/* Tools widget */}
-            <div className="project-sidebar__widget">
+            <section className="project-sidebar__widget">
                 <h4 className="project-sidebar__widget-title">
                     Tools
                 </h4>
@@ -38,9 +37,9 @@ const ProjectSidebar = ({data}) => {
                         </p>
                     ))}
                 </div>
-            </div>
+            </section>
             {/* Project features */}
-            <div className="project-sidebar__widget">
+            <section className="project-sidebar__widget">
                 <h4 className="project-sidebar__widget-title">
                     Main features
                 </h4>
@@ -51,7 +50,7 @@ const ProjectSidebar = ({data}) => {
                         </p>
                     ))}
                 </div>
-            </div>
+            </section>
         </aside>
     );
 }

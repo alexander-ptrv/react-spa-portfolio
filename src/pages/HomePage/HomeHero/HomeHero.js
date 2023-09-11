@@ -1,10 +1,8 @@
 import { AiOutlineArrowRight, AiOutlineArrowDown } from "react-icons/ai";
-
 import "./HomeHero.scss";
 import heroImage from "../../../assets/images/hero.png";
 import ColoredDot from "../../../components/ColoredDot/ColoredDot";
 import OpenFormButton from "../../../components/OpenFormButton/OpenFormButton";
-
 
 const HomeHero = ({scroll}) => {
     return (  

@@ -1,7 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-
 /* Overlay containing a contact form
 /* -------------------------------------------------------------------------- */ 
 
@@ -34,9 +33,9 @@
         background: transparent;
         transition: all .2s ease-in-out;
         cursor: pointer;
-    }
 
-    &__close-btn:hover { opacity: 1; }
+        &_:hover { opacity: 1; }
+    }
 }
 
 .form-overlay {

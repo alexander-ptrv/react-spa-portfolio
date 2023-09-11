@@ -1,12 +1,10 @@
 @use "../../../assets/styles/variables" as *;
 @use "../../../assets/styles/mixins" as *;
 
-
 /* Project page image gallery
 /* -------------------------------------------------------------------------- */
 
 .project-gallery {
-
     &__grid {
         display: flex;
         flex-direction: column;

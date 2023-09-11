@@ -1,7 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-
 /*	Project grid
 /* -------------------------------------------------------------------------- */
 
@@ -18,11 +17,6 @@
 }
 
 /* Project card --------------------- */
-
-/**
- * 1. Hiding overlay on smaller devices
- * 2. Showing card description on smaller devices
- */
 
 .project-card {
     position: relative;
@@ -46,7 +40,7 @@
         opacity: 0;
         transition: all .2s ease-in-out;
 
-        @include md { display: none; } /* 1 */
+        @include md { display: none; }
     }
 
     &:hover &__overlay { opacity: 1; }
@@ -90,6 +84,6 @@
         padding: $space-lg;
         background: scale-color($primary, $lightness: 5%);
 
-        @include md { display: flex; } /* 2 */
+        @include md { display: flex; }
     }
 }

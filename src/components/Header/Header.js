@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
-
 import { handleLogoClick } from "../../utils/utils";
 import logo from "../../assets/images/ptrv-logo.svg";
 import Hamburger from "./Hamburger/Hamburger";
 import "./Header.scss";
-
 
 const Header = () => {
     return (  
@@ -27,7 +25,6 @@ const Header = () => {
                         href="mailto:ptrv.dev@gmail.com"
                         rel="nofollow"
                     >
-
                         ptrv.dev@gmail.com
                     </a>
                     <a 
@@ -35,7 +32,6 @@ const Header = () => {
                         href="mailto:ptrv.dev@gmail.com"
                         rel="nofollow"
                     >
-                        
                         <AiOutlineMail />
                     </a>
                     <Hamburger />

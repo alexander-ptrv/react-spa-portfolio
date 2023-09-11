@@ -1,7 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-
 /* Fixed social medias block
 /* -------------------------------------------------------------------------- */ 
 
@@ -18,9 +17,9 @@
         flex-direction: column;
         opacity: $emph-low;
         transition: all .2s ease-in-out;
-    }
 
-    &__list:hover { opacity: 1; }
+        &:hover { opacity: 1; }
+    }
 
     /* Vertical line at the bottom ------ */
 

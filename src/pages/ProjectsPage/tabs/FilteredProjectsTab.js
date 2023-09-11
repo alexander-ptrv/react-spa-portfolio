@@ -4,7 +4,6 @@ import ProjectGrid from "../../../components/ProjectGrid/ProjectGrid";
 import LoadingProjectGrid from "../../../components/LoadingProjectGrid/LoadingProjectGrid";
 import ErrorBadge from "../../../components/ErrorBadge/ErrorBadge";
 
-
 const FilteredProjectsTab = () => {
 
     const {slug} = useParams();

@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { Helmet } from "react-helmet";
-
 import HomeAbout from "./HomeAbout/HomeAbout";
 import HomeHero from "./HomeHero/HomeHero";
 import HomeProjects from "./HomeProjects/HomeProjects";
@@ -8,13 +7,12 @@ import FixedSocials from "../../components/FixedSocials/FixedSocials";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import HomeFooter from "./HomeFooter/HomeFooter";
 
-
 const HomePage = () => {
 
     useScrollToTop();
 
     // "HandleScroll" funcion is passed to "My Work" button on home page, 
-    // which scrolls to the specific ref defined in "HomeProject" component.
+    // which scrolls to the specific ref defined in "HomeProject" component
     const myRef = useRef(null)
 
     const handleScroll = () => {

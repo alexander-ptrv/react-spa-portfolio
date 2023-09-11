@@ -1,6 +1,5 @@
 @use "../../assets/styles/variables" as *;
 
-
 /* Footer menu
 /* -------------------------------------------------------------------------- */ 
 
@@ -12,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 
     /* Menu item ------------------------ */
 
@@ -28,11 +26,7 @@
         transition: all .2s ease-in-out;
     }
 
-    &__menu-item.active {
-        color: $accent;
-    }
+    &__menu-item.active { color: $accent; }
 
-    &__menu-item:hover {
-        color: rgba($on-primary, 87%);
-    }
+    &__menu-item:hover { color: rgba($on-primary, 87%); }
 }

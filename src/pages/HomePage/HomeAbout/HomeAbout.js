@@ -1,10 +1,8 @@
 import { Outlet } from "react-router-dom";
-
 import "./HomeAbout.scss";
 import photo from "../../../assets/images/home-photo.png";
 import ColoredDot from "../../../components/ColoredDot/ColoredDot";
 import TabbedNav from "../../../components/TabbedNav/TabbedNav";
-
 
 // Tabbed menu items
 const data = [

@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
-
 import "./ProjectGrid.scss";
 
-
 const ProjectGrid = ({data}) => {
-
     return (
         <div className="project-grid">
             {data.map((project) => (
@@ -12,7 +9,10 @@ const ProjectGrid = ({data}) => {
                     <div className="project-card__overlay">
                         <div className="project-card__info">
                             <h3 className="project-card__title">{project.title.rendered}</h3>
-                            <p className="project-card__description" dangerouslySetInnerHTML={{__html: project.excerpt.rendered}} />
+                            <p 
+                                className="project-card__description" 
+                                dangerouslySetInnerHTML={{__html: project.excerpt.rendered}} 
+                            />
                         </div>
                         <div className="project-card__tags">
                             {project._embedded["wp:term"]["1"].map((tech) => (

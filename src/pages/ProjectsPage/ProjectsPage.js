@@ -1,12 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
 import ColoredDot from "../../components/ColoredDot/ColoredDot";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import "./ProjectsPage.scss";
 import TabbedNav from "../../components/TabbedNav/TabbedNav";
 import FooterNav from "../../components/FooterNav/FooterNav";
-
 
 // Tabbed nav items
 const data = [

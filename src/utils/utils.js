@@ -1,6 +1,6 @@
 // Curtain menu toggle
 //
-// Transforms hamburger into a cross, makes curtain visible, 
+// Transforms hamburger into cross, makes curtain visible, 
 // disables scrolling
 export const toggleCurtain = () => {
 

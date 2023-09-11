@@ -1,6 +1,5 @@
 import "./ProjectGallery.scss";
 
-
 const ProjectGallery = ({data}) => {
 
     // Project gallery images from strapi API. Can only show 3 images.
@@ -9,7 +8,7 @@ const ProjectGallery = ({data}) => {
     const image3 = data["0"].acf.project_image_3;
 
     return (  
-        <section className="project-gallery-wrapper">
+        <div className="project-gallery-wrapper">
             <div className="project-gallery container container--2-xl">
                 <div className="project-gallery__grid">
                     {/* Checking if images exist */}
@@ -48,7 +47,7 @@ const ProjectGallery = ({data}) => {
                     )}
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
  

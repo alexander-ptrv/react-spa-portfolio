@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-
 import "./IconButton.scss";
-
 
 const IconButton = ({variant = "icon-only", children, to, isExternal}) => {
     return (  

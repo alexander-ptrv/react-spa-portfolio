@@ -1,6 +1,5 @@
 @use "../../assets/styles/variables" as *;
 
-
 /* Projects page
 /* -------------------------------------------------------------------------- */
 
@@ -10,7 +9,6 @@
 }
 
 .projects {
-
     &__headline { margin-bottom: $space-2-xl; }
 
     &__heading { margin-bottom: $space-xl; }

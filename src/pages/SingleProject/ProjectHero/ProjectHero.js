@@ -1,16 +1,11 @@
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
 import "./ProjectHero.scss";
 import Button from "../../../components/Button/Button";
 import ColoredDot from "../../../components/ColoredDot/ColoredDot";
 
-
 const ProjectHero = ({data}) => {
-
-    console.log(data);
-
     return (  
         <section className="project-hero-wrapper">
             <div className="project-hero container">

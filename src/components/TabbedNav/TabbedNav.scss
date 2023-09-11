@@ -1,7 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-
 /*	Tabbed navigation
 /* -------------------------------------------------------------------------- */
 
@@ -41,11 +40,11 @@
         line-height: 1;
         opacity: $emph-md;
         transition: all .2s ease-in-out;
+
+        &:hover { opacity: $emph-base; }
     
         @include sm { flex: 1; }
     }
-    
-    &__menu-item:hover { opacity: $emph-base; }
     
     &__menu-item.active {
         border-bottom-color: $accent;

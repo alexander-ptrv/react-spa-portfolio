@@ -1,16 +1,11 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-
 /* Regular button with external/internal link
 /* -------------------------------------------------------------------------- */ 
 
-/**
- * 1. Preventing button from stretching
- */
-
 .btn {
-    display: inline-flex; /* 1 */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: $space-xs;
@@ -33,10 +28,10 @@
         font-size: $fs-lg;
         background: transparent;
 
+        &:hover { background: rgba($on-primary, 4%); }
+
         @include md { font-size: $fs-md; }
     } 
-
-    &--text:hover { background: rgba($on-primary, 4%); }
 
     /* Outlined button ------------------ */
 
@@ -47,10 +42,10 @@
         font-size: $fs-lg;
         background: transparent;
 
+        &:hover { background: rgba($on-primary, 4%); }
+
         @include md { font-size: $fs-md; }
     }
-
-    &--outlined:hover { background: rgba($on-primary, 4%); }
 
     /* Call to action button ------------ */
 
@@ -61,8 +56,8 @@
         font-size: $fs-lg;
         background: transparent;
 
+        &:hover { background: rgba($accent, 6%); }
+
         @include md { font-size: $fs-md; }
     }
-
-    &--cta:hover { background: rgba($accent, 6%); }
 }

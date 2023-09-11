@@ -1,16 +1,11 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-
 /*	Button that triggers contact form popup
 /* -------------------------------------------------------------------------- */
 
-/**
- * 1. Preventing stretch
- */
-
 .open-form-btn {
-    display: inline-flex; /* 1 */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 48px;

@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
-
 import "./ContactForm.scss";
-
 
 const ContactForm = () => {
 
@@ -107,7 +105,7 @@ const ContactForm = () => {
                 ref={form}
                 noValidate
             >
-                
+                {/* Name field */}
                 <input 
                     className="contact-form__text-field"
                     name="user_name"
@@ -118,6 +116,7 @@ const ContactForm = () => {
                 <p className="contact-form__error contact-form__error--empty-name">
                     Name is empty
                 </p>
+                {/* Email field */}
                 <input 
                     className="contact-form__text-field"
                     name="user_email"
@@ -128,6 +127,7 @@ const ContactForm = () => {
                 <p className="contact-form__error contact-form__error--empty-email">
                     Email is empty or missing an @ symbol
                 </p>
+                {/* Message field */}
                 <textarea 
                     className="contact-form__text-field contact-form__text-field--textarea"
                     name="message"
@@ -137,12 +137,14 @@ const ContactForm = () => {
                 <p className="contact-form__error contact-form__error--empty-message">
                     Message is empty
                 </p>
+                {/* Submit button */}
                 <input
                     className="contact-form__send-btn" 
                     type="submit" 
                     value="Send" 
                 />
             </form>
+            {/* Success message */}
             <div className="form-success-message">
                 <h3 className="form-success-message__heading">I've recieved your message!</h3>
                 <p className="form-success-message__text">

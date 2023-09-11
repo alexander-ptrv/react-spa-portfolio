@@ -1,7 +1,6 @@
 @use "../../../assets/styles/variables" as *;
 @use "../../../assets/styles/mixins" as *;
 
-
 /* Project page footer
 /* -------------------------------------------------------------------------- */
 
@@ -16,9 +15,7 @@
 .project-footer {
     text-align: center;
 
-    &__heading {
-        margin-bottom: $space-lg; 
-    }
+    &__heading { margin-bottom: $space-lg; }
 
     &__text {
         margin-bottom: $space-2-xl;

@@ -1,6 +1,5 @@
 import "./LoadingProjectGrid.scss";
 
-
 const LoadingProjectGrid = () => {
     return (  
         <div className="loading-project-grid">

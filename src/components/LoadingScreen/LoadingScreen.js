@@ -1,7 +1,6 @@
 import "./LoadingScreen.scss";
 import ErrorBadge from "../../components/ErrorBadge/ErrorBadge";
 
-
 const LoadingScreen = ({loading}) => {
     return (  
         <section className="loading-screen">

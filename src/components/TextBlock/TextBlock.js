@@ -1,7 +1,4 @@
-import rehypeRaw from "rehype-raw";
-
 import "./TextBlock.scss";
-
 
 // Using react-markdown to make text recieved from Strapi readable
 

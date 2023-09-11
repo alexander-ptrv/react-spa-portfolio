@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./FooterNav.scss";
 
-
 // Footer menu items
 const data = [
     {name: "Home", link: "/", key: 0},
@@ -10,7 +9,7 @@ const data = [
 
 const FooterNav = () => {
     return (  
-        <section className="footer-nav-wrapper">
+        <footer className="footer-nav-wrapper">
             <nav className="footer-nav container">
                 {data.map((item) => (
                     <NavLink 
@@ -19,12 +18,11 @@ const FooterNav = () => {
                     key={item.key}
                     end={true}
                     >
-                        
                         {item.name}
                     </NavLink>
                 ))}
             </nav>
-        </section>
+        </footer>
     );
 }
  

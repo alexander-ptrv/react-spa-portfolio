@@ -1,7 +1,6 @@
 import "./Button.scss";
 import { Link } from "react-router-dom";
 
-
 const Button = ({variant = "text", children, to, leftIcon, rightIcon, isExternal}) => {
     return (  
         <>
@@ -12,7 +11,6 @@ const Button = ({variant = "text", children, to, leftIcon, rightIcon, isExternal
                     target="_blank" 
                     rel="nofollow"
                 >
-
                     {leftIcon && <div className="btn__icon">{leftIcon}</div>}
                     {children}
                     {rightIcon && <div className="btn__icon">{rightIcon}</div>}
@@ -22,7 +20,6 @@ const Button = ({variant = "text", children, to, leftIcon, rightIcon, isExternal
                     className={`btn btn--${variant}`} 
                     to={`${to}`}
                 >
-                    
                     {leftIcon && <div className="btn__icon">{leftIcon}</div>}
                     {children}
                     {rightIcon && <div className="btn__icon">{rightIcon}</div>}

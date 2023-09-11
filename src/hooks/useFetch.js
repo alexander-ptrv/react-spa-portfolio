@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 
-
-// Fethiching data from Strapi API
-//
-// Uncomment setTimeout to test the loading
+// Fethiching data from API endpoint
 
 const useFetch = url => {
 
@@ -12,9 +9,7 @@ const useFetch = url => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        // setTimeout(() => {
         fetch(url)
-
             .then(res => {
                 return res.json();
             })
@@ -29,7 +24,6 @@ const useFetch = url => {
                 setError(error.message);
                 setLoading(false);
             })
-        // }, 2000)
     }, [url])
 
     return {data, loading, error}

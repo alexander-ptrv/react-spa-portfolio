@@ -1,6 +1,5 @@
 @use "../../assets/styles/variables" as *;
 
-
 /*	Loading screen
 /* -------------------------------------------------------------------------- */
 
@@ -86,7 +85,7 @@
     }    
 }
 
-/* Loading dots animation ----------- */
+/* Animation ----------- */
 
 @keyframes loading-grid {
     0%, 100% { opacity: 1; }

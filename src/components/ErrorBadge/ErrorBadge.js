@@ -1,6 +1,5 @@
 import "./ErrorBadge.scss";
 
-
 const ErrorBadge = () => {
     return (  
         <div className="error-badge">

@@ -3,10 +3,9 @@ import ColoredDot from "../../../components/ColoredDot/ColoredDot";
 import TextBlock from "../../../components/TextBlock/TextBlock";
 import ProjectSidebar from "./ProjectSidebar/ProjectSidebar";
 
-
 const ProjectDescription = ({data}) => {
     return (  
-        <section className="project-description-wrapper section-padding">
+        <div className="project-description-wrapper section-padding">
             <div className="project-description container container--md">
                 <div className="project-description__columns">
                     {/* Left column */}
@@ -24,7 +23,7 @@ const ProjectDescription = ({data}) => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
  

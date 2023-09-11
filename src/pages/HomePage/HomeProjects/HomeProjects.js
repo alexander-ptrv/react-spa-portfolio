@@ -6,13 +6,12 @@ import ProjectGrid from "../../../components/ProjectGrid/ProjectGrid";
 import LoadingProjectGrid from "../../../components/LoadingProjectGrid/LoadingProjectGrid";
 import ErrorBadge from "../../../components/ErrorBadge/ErrorBadge";
 
-
 const HomeProjects = ({sectionRef}) => {
 
     const {data, loading, error} = useFetch("https://wordpress.ptrv.dev/wp-json/wp/v2/project?acf_format=standard&_embed&per_page=50");
 
     return (  
-        <section className="home-projects-wrapper section-padding" ref={sectionRef}>
+        <div className="home-projects-wrapper section-padding" ref={sectionRef}>
             <div className="home-projects container">
                 <div className="home-projects__headline">
                     <h2>Featured projects<ColoredDot /></h2> 
@@ -24,7 +23,7 @@ const HomeProjects = ({sectionRef}) => {
                     data={data.filter(project => project.acf.featured)} 
                 />
             </div>
-        </section>
+        </div>
     );
 }
  
